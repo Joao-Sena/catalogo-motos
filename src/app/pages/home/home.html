@@ -1,0 +1,53 @@
+<app-header route="home"></app-header>
+
+<main class="catalog-page">
+  <section class="catalog-header">
+    <div class="catalog-header-row">
+      <h1>CATÁLOGO DE <span class="highlight">MOTOS</span></h1>
+      <button class="btn-register" type="button" (click)="openModal()">Cadastrar moto</button>
+    </div>
+    <p class="subtitle">{{subtitle}}</p>
+  </section>
+
+  <section class="catalog-grid">
+
+    <!-- MOTOS ADICIONADAS VIA FORM -->
+     @for(moto of newMotos; track $index; let i = $index) {
+      <div class="moto-card">
+        <button class="card-delete" type="button" aria-label="Excluir moto" (click)="deleteMoto($index)">×</button>
+        <div class="card-image">
+          <img [src]="moto.imageUrl" loading="lazy" alt="{{moto.model}}" />
+        </div>
+        <div class="card-body">
+          <div class="card-info">
+            <h2 class="card-title">{{moto.model}}</h2>
+            <div class="card-meta">
+              <span class="card-price">{{moto.price | currencyPrefix}}</span>
+              <span class="card-year">{{moto.year}}</span>
+            </div>
+          </div>
+          <button class="btn-details">Ver Detalhes</button>
+        </div>
+      </div>
+     } @empty {
+      <div class="moto-card">
+        <div class="card-image">
+          <img src="https://t3.ftcdn.net/jpg/03/38/73/52/360_F_338735267_sWzC0v7qdMRXDMHA3SqOc5tn9MhonRwV.jpg" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-info">
+            <h2 class="card-title">Sem motos cadastradas</h2>
+            <span class="card-price">Clique em "Cadastrar moto" para adicionar uma nova moto.</span>
+          </div>
+        </div>
+      </div>
+     }
+
+  </section>
+
+  @if(isModalOpen) {
+    <moto-form-modal (close)="closeModal()" (confirm)="handleConfirm($event)"></moto-form-modal>
+  }
+</main>
+
+<app-footer></app-footer>

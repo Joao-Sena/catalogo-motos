@@ -1,0 +1,91 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.52);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 300;
+}
+
+.modal-card,
+.modal-card *,
+.modal-card *::before,
+.modal-card *::after {
+  box-sizing: border-box;
+}
+
+.modal-card {
+  width: min(100%, 480px);
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.modal-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #39b54a;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+label {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  color: #111;
+}
+
+input:focus {
+  outline: 2px solid #39b54a;
+  outline-offset: 2px;
+}
+
+.modal-confirm {
+  width: 100%;
+  background: #39b54a;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.95rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal-confirm:not(:disabled):hover {
+  background: #2e9e3e;
+}
+
+.modal-confirm:disabled {
+  background: #c4c4c4;
+  color: #6d6d6d;
+  cursor: not-allowed;
+}

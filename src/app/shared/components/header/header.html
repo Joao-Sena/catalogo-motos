@@ -1,0 +1,14 @@
+<header class="navbar">
+  <div class="navbar-brand">
+    <div class="logo-icon">
+        <img src="https://vectorseek.com/wp-content/uploads/2024/05/Kawasaki-2024-Logo-Vector.svg-.png" alt="" height="40px">
+    </div>
+    <!-- <span class="brand-name">KAWASAKI</span> -->
+  </div>
+  <nav class="navbar-links">
+    <a routerLink="/home" [class.active]="route() === 'home'">MOTOS</a>
+    <a routerLink="/about/João Sena" [class.active]="route() === 'about'">SOBRE</a>
+    <a routerLink="/admin-area" [class.active]="route() === 'admin-area'">ADMIN</a>
+    <a href="#" class="search-icon">🔍</a>
+  </nav>
+</header>

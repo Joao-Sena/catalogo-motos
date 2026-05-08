@@ -1,0 +1,28 @@
+<div class="modal-backdrop" (click)="onBackdropClick($event)">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" (click)="close.emit()" aria-label="Fechar modal">×</button>
+    <h2 id="modal-title">Informações da moto</h2>
+
+    <form [formGroup]="formMoto">
+      <label>Imagem da moto
+        <input type="text" formControlName="imageUrl" placeholder="URL da imagem" required/>
+      </label>
+
+      <label>Modelo da moto
+        <input type="text" formControlName="model" placeholder="Modelo" required/>
+      </label>
+
+      <label>Preço
+        <input type="text" formControlName="price" placeholder="Preço" required/>
+      </label>
+
+      <label>Ano
+        <input type="number" formControlName="year" placeholder="Ano" max="2026" required/>
+      </label>
+
+      <button class="modal-confirm" type="button" [disabled]="!isFormValid" (click)="submitForm()">
+        Confirmar
+      </button>
+    </form>
+  </div>
+</div>
