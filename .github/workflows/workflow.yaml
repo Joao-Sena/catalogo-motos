@@ -20,7 +20,9 @@ jobs:
           npm install
           npm run build
           npm run lint
-          npm test
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+          xvfb-run -a npm test
 
   create-pr-develop-to-main:
     name: Create PR develop -> main
