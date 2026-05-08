@@ -24,12 +24,8 @@ jobs:
           xvfb-run -a npm test -- --watch=false --browsers=ChromeHeadless --progress=false
           npm run build
 
-  exemplo-job:
-  name: Pegar o Run Id da Action
-  runs-on: ubuntu-latest
-  steps:
-    - name: Pegar o Run ID
-      run: echo "O ID desta execução é ${{ github.run_id }}"
+      - name: Pegar o Run ID
+        run: echo "O ID desta execução é ${{ github.run_id }}"
 
   create-pr-develop-to-main:
     name: Create PR develop -> main
