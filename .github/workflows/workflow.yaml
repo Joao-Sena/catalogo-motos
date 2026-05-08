@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Pegar o Run ID
+        run: echo "O ID desta execução é ${{ github.run_id }}"
+
+
+    steps:
       - uses: actions/checkout@v3
       - name: Using Node.js
         uses: actions/setup-node@v2
