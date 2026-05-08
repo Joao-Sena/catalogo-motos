@@ -16,16 +16,16 @@ import { HeaderComponent } from '../../shared/components/header/header';
 })
 export class HomeComponent {
 
-  subtitle: string = 'Confira as motos disponíveis';
-  protected isModalOpen = false;
+  public subtitle: string = 'Confira as motos disponíveis';
+  public isModalOpen = false;
 
-  newMotos: MotoFormData[] = [...initialMotos];
+  public newMotos: MotoFormData[] = [...initialMotos];
 
-  protected openModal(): void {
+  public openModal(): void {
     this.isModalOpen = true;
   }
 
-  protected closeModal(): void {
+  public closeModal(): void {
     this.isModalOpen = false;
   }
 

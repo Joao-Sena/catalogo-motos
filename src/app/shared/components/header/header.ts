@@ -9,6 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.scss',
 })
 export class HeaderComponent {
-  route = input<string>('home');
-
+  public route = input<string>('home');
 }

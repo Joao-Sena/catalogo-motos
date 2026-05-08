@@ -12,11 +12,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AboutComponent implements OnInit {
 
-  namePerson: string = '';
+  public namePerson: string = '';
 
   constructor(private activeRoute: ActivatedRoute) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.namePerson = this.activeRoute.snapshot.paramMap.get('name') || '';
   }
 

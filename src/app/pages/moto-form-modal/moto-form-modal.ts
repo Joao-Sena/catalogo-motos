@@ -11,21 +11,21 @@ import { MotoFormData } from '../../shared/interfaces/moto-form-data';
   styleUrls: ['./moto-form-modal.scss']
 })
 export class MotoFormModal {
-  @Output() close = new EventEmitter<void>();
-  @Output() confirm = new EventEmitter<MotoFormData>();
+  @Output() public close = new EventEmitter<void>();
+  @Output() public confirm = new EventEmitter<MotoFormData>();
 
-  formMoto = new FormGroup({
+  public formMoto = new FormGroup({
     imageUrl: new FormControl<string>('', Validators.required),
     model: new FormControl<string>('', Validators.required),
     price: new FormControl<string>('', Validators.required),
     year: new FormControl<number | null>(null, [Validators.required, Validators.max(2026)])
   });
 
-  get isFormValid(): boolean {
+  public get isFormValid(): boolean {
     return this.formMoto.valid;
   }
 
-  submitForm(): void {
+  public submitForm(): void {
     if (this.formMoto.invalid) {
       return;
     }
@@ -34,7 +34,7 @@ export class MotoFormModal {
     this.formMoto.reset();
   }
 
-  onBackdropClick(event: MouseEvent): void {
+  public onBackdropClick(event: MouseEvent): void {
     if ((event.target as HTMLElement).classList.contains('modal-backdrop')) {
       this.close.emit();
     }
