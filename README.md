@@ -2,6 +2,11 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.25.
 
+Screenshot this project:
+<span>
+    <img src="https://raw.githubusercontent.com/Joao-Sena/catalogo-motos/develop/src/assets/images/home.png" width="80%">
+</span>
+
 ## Development server
 
 To start a local development server, run:
@@ -9,6 +14,8 @@ To start a local development server, run:
 ```bash
 ng serve
 ```
+
+Depois disso basta clicar no botão para adicionar uma nova moto (feito apenas com mock para não ter dependências de rodar API ou servidor externo).
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
