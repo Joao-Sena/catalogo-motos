@@ -1,8 +1,12 @@
 # CatalogoMotos
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.25.
+✅ Projeto criado em Angular 20
+✅CI/CD
+✅Esteira automatizada com o Github Actions
+✅Typescript para tipar interfaces utilizadas
+✅I.A auxiliando na criação de testes unitários para cobrir o projeto e passar na esteira
 
-Screenshot this project:
+Captura de tela de como ficou o catalogo de motos
 <span>
     <img src="https://raw.githubusercontent.com/Joao-Sena/catalogo-motos/develop/src/assets/images/home.png" width="80%">
 </span>
