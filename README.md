@@ -1,10 +1,10 @@
 # CatalogoMotos
 
-✅ Projeto criado em Angular 20
-✅CI/CD
-✅Esteira automatizada com o Github Actions
-✅Typescript para tipar interfaces utilizadas
-✅I.A auxiliando na criação de testes unitários para cobrir o projeto e passar na esteira
+✅ Projeto criado em Angular 20 <br>
+✅CI/CD <br>
+✅Esteira automatizada com o Github Actions <br>
+✅Typescript para tipar interfaces utilizadas <br>
+✅I.A auxiliando na criação de testes unitários para cobrir o projeto e passar na esteira <br>
 
 Captura de tela de como ficou o catalogo de motos
 <span>
